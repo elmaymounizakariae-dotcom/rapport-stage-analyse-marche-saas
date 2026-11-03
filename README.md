@@ -1,73 +1,110 @@
-﻿# Analyse Intelligente du Marché SaaS
+﻿
+# Analyse Intelligente du Marché SaaS
 
 <p align="center">
-  <strong>Conception d'un Système d'Aide à la Décision basé sur l'Intelligence Artificielle</strong>
+  <strong>Projet de Fin d'Études — KIINOV</strong><br>
+  Analyse intelligente du marché SaaS : conception d'une plateforme d'analyse et d'aide à la décision basée sur l'IA
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-  <img src="https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge" alt="Machine Learning">
-  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask" alt="Flask">
-  <img src="https://img.shields.io/badge/LLM-Groq-blue?style=for-the-badge" alt="LLM">
-  <img src="https://img.shields.io/badge/RAG-AI-purple?style=for-the-badge" alt="RAG">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Machine_Learning-FF6F00?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Generative_AI-8A2BE2?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask">
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite">
 </p>
 
-## Présentation
+---
 
-Ce projet de fin d'études porte sur la conception et le développement d'un système intelligent d'aide à la décision destiné à l'analyse du marché des solutions SaaS.
+## Présentation du projet
 
-L'objectif est d'accompagner les entreprises dans l'identification et la comparaison des solutions SaaS selon leurs besoins, leur budget et leurs critères de sélection.
+Ce projet de fin d'études, réalisé au sein de **KIINOV**, porte sur la conception et le développement d'une plateforme intelligente dédiée à l'analyse, la classification et la recommandation des solutions SaaS de facturation.
 
-Le système combine l'analyse de données, le Machine Learning, les modèles de langage (LLM), le RAG et les méthodes multicritères d'aide à la décision.
+La plateforme combine la Data Science, le Machine Learning, l'Intelligence Artificielle Générative et les méthodes multicritères d'aide à la décision afin de faciliter l'évaluation et la comparaison des solutions SaaS.
 
-## Fonctionnalités principales
+**Période :** Avril – Juin 2026
 
-- Analyse et exploration des données du marché SaaS.
-- Prédiction et classification à l'aide de modèles de Machine Learning.
-- Comparaison intelligente des solutions SaaS.
-- Évaluation multicritère avec la méthode TOPSIS.
-- Assistant conversationnel basé sur un LLM.
-- Recherche augmentée par génération (RAG).
-- Consultation de références réglementaires CNDP et RGPD.
+## Objectifs et réalisations
 
-## Technologies utilisées
+- Conception et développement d'une plateforme intelligente d'analyse et d'aide à la décision.
+- Constitution et enrichissement d'un dataset de plus de **1 400 solutions SaaS**, structuré autour de 31 variables fonctionnelles, techniques et économiques.
+- Réalisation d'analyses exploratoires (EDA) et préparation des données.
+- Augmentation synthétique des données avec CTGAN et SMOTE.
+- Développement et évaluation de modèles de Machine Learning.
+- Mise en place d'un moteur de recommandation multicritère basé sur WSM et TOPSIS.
+- Intégration d'un assistant conversationnel basé sur LLaMA 3.3 70B et RAG.
 
-| Domaine | Technologies |
+## Approches et méthodes
+
+| Domaine | Méthodes et techniques |
 |---|---|
-| Programmation | Python |
-| Machine Learning | Scikit-learn |
-| Backend | Flask, API REST |
-| Intelligence artificielle | LLM, Groq |
-| RAG | Recherche documentaire augmentée |
-| Aide à la décision | TOPSIS, MCDM |
-| Base de données | SQLite |
-| Interface | HTML, CSS, JavaScript |
+| Analyse des données | EDA, KPI |
+| Classification | Random Forest, SVM, Gradient Boosting, KNN |
+| Régression | Régression multiple |
+| Clustering | K-Means |
+| Augmentation des données | CTGAN, SMOTE |
+| Explicabilité | SHAP |
+| Aide à la décision | MCDM, WSM, TOPSIS |
+| IA générative | LLM, LLaMA 3.3 70B, Groq API, RAG, NLP |
+
+## Technologies et outils
+
+**Langages**
+- Python, SQL, JavaScript, HTML5, CSS3.
+
+**Data Science et Machine Learning**
+- Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn.
+
+**Intelligence Artificielle Générative**
+- LLM, LLaMA 3.3 70B, Groq API, RAG, NLP.
+
+**Machine Learning avancé**
+- Random Forest, SVM, Gradient Boosting, CTGAN, SMOTE, SHAP.
+
+**Analyse décisionnelle**
+- MCDM, TOPSIS, WSM, EDA, KPI.
+
+**Développement Backend**
+- Flask, API REST, JSON.
+
+**Base de données**
+- SQLite.
+
+**Évaluation des modèles**
+- Accuracy, AUC-ROC, Cross-Validation, MAE, RMSE.
 
 ## Architecture générale
 
 ```text
-Données du marché SaaS
-        |
-        v
+Dataset SaaS
+     |
+     v
 Préparation et analyse des données
-        |
-        v
-Modèles de Machine Learning
-        |
-        v
-API Backend Flask
-        |
-        +------ Assistant IA (LLM)
-        |
-        +------ Système RAG
-        |
-        +------ Comparaison TOPSIS
-        |
-        v
-Interface utilisateur
-        |
-        v
-Aide à la décision
+     |
+     v
+Machine Learning
+     |
+     +----------------------+
+     |                      |
+     v                      v
+Classification          Recommandation
+et prédiction           WSM / TOPSIS
+     |                      |
+     +-----------+----------+
+                 |
+                 v
+          Backend Flask
+                 |
+       +---------+---------+
+       |                   |
+       v                   v
+  Assistant IA         Système RAG
+  LLaMA 3.3 70B       Base documentaire
+       |                   |
+       +---------+---------+
+                 |
+                 v
+        Interface utilisateur
 ```
 
 ## Équipe du projet
@@ -82,20 +119,17 @@ Aide à la décision
 
 **Établissement :** Faculté des Sciences et Techniques de Tanger  
 **Université :** Abdelmalek Essaâdi  
+**Formation :** Licence Analytique des Données  
 **Année universitaire :** 2025–2026
 
 ## Rapport de stage
 
-Le rapport complet du projet est disponible dans le fichier PDF :
+Le rapport détaillé du projet est disponible dans ce dépôt :
 
-📄 `Rapport_de_Stage.pdf`
-
-## Objectif
-
-Développer une solution intelligente combinant Data Science et Intelligence Artificielle afin de faciliter l'analyse, la comparaison et le choix des solutions SaaS.
+📄 **Rapport_de_Stage.pdf**
 
 ---
 
 <p align="center">
-  <strong>Projet de Fin d'Études — Licence Analytique des Données</strong>
+  Projet de Fin d'Études · KIINOV · 2026
 </p>
